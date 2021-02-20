@@ -1,23 +1,37 @@
 import logo from './logo.svg';
-import './App.css';
-
+import Statefull from './Statefull';
+import Stateless from './Stateless';
+import DataPegawai from './Props/DataPegawai';
 function App() {
+  let dataPegawai = [
+    {
+      name: "Reymunda Dwi A",
+      age: "18",
+      univ: "Universitas Komputer Indonesia",
+      city: "Bandung"
+    },
+    {
+      name: "Json Al-goritmi",
+      age: "20",
+      univ: "Universitas Indonesia",
+      city: "Depok"
+    },
+    {
+      name: "John Doe",
+      age: "21",
+      univ: "Harvard University",
+      city: "New York"
+    }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        {/* <Stateless/>
+        <Statefull/> */}
+        {
+          dataPegawai.map(data => {
+            return <DataPegawai name={data.name} age={data.age} univ={data.univ} city={data.city}/>
+          })
+        }
     </div>
   );
 }
