@@ -1,0 +1,16 @@
+
+.container{
+    border: 1px solid black;
+    width: 1000px;
+    height: 200px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: left;
+    padding-right: 10px;
+}
+.container img{
+    height: 200px;
+    width: 150px;
+    object-fit: cover;
+    margin-right: 10px;
+}
